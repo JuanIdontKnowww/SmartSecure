@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" url="image/png" sizes="32x32" href="images/logotipo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logotipo.png">
   <title>Smart Secure</title>
   <style>
     
@@ -85,12 +85,12 @@
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 2.2em;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 1.1em;
     }
 
     .container {
@@ -162,6 +162,8 @@
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
   transition: background 0.3s, transform 0.3s;
 }
 .btn-vermas:hover{
@@ -235,13 +237,13 @@ form textarea:focus {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        gap: 5px;
+        gap: 10px;
       }
       nav a{
         flex: 1 1 0;
-        max-width: 25%;
-        padding: 10px 40px;
-        font-size: 14px;
+        max-width: 100%;
+        padding: 10px 15px;
+        font-size: 16px;
         text-align: center;
         margin: 0;
         box-sizing: border-box;
@@ -255,6 +257,15 @@ form textarea:focus {
         margin-top: 15px;
       }
       
+      .producto-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .info-producto{
+        text-align: center;
+      }
+
       .features {
         flex-direction: column;
       }
@@ -322,7 +333,7 @@ form textarea:focus {
   <h2 style="text-align:center;">Nuestros Productos</h2>
   <div class="features">
     <div class="feature">
-      <img src="images/Cámara IP.png" alt="Cámara IP" style="width: 300px;px; border-radius:8px;">
+      <img src="images/Cámara IP.png" alt="Cámara IP" style="width: 300px; border-radius:8px;">
       <h3>Cámaras IP</h3>
       <p>Alta definición y conexión remota en tiempo real.</p>
       <a href="#" class="btn-vermas">Ver más</a>
@@ -392,10 +403,10 @@ form textarea:focus {
   <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;">
     <form style="flex:1 1 45%; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
       <label>Nombre</label>
-      <input type="text" name="nombre" required style="width:80%; padding:10px; margin-bottom:10px;">
+      <input type="text" name="nombre" required style="width:100%; padding:10px; margin-bottom:10px;">
       
       <label>Email</label>
-      <input type="email" name="email" required style="width:80%; padding:10px; margin-bottom:10px;">
+      <input type="email" name="email" required style="width:100%; padding:10px; margin-bottom:10px;">
       
       <label>Mensaje</label>
       <textarea name="mensaje" rows="4" required style="width:100%; padding:10px; margin-bottom:10px;"></textarea>
