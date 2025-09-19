@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" url="image/png" sizes="32x32" href="images/logotipo.png">
+  <title>Smart Secure</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      border-radius: 7px;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #004d99;
+      padding: 10px 0;
+    }
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-encabezado {
+      width: 90px; 
+      height: auto;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    .logo-link{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      margin: 0;
+    }
+    .logo-encabezado{
+      width: 90px;
+      height: auto;
+      margin-right: 10px;
+    }
+    .logo-texto h1{
+      margin: 0;
+      font-size: 22px;
+      color: #23a39b;
+      line-height: 1.1;
+    }
+    .logo-texto h3{
+      margin: 2px 0 0 0;
+      font-size: 14px;
+      color: #23a39b;
+      font-weight: normal;
+      line-height:1.1;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      padding: 45px 50px;
+      text-decoration: none;
+      margin: 5px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #003366;
+      transform:scale(1.1)
+    }
+
+    .hero {
+      background-image: url(images/cctv-security-camera.png);
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .us{
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 60%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .us .texto{
+      flex: 2;
+    }
+    .us .imagen img{
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .producto-destacado {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+      background-color: #f4f4f4;
+      text-align: center;
+      }
+    .producto-destacado h2{
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+.producto-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.producto-card img{
+  width: 450px;
+  height: auto;
+}
+.info-producto{
+  padding: 20px;
+  text-align: left;
+}
+.info-producto h3{
+  margin-top: 0;
+  color: #333;
+}
+.info-producto p{
+  color: #555;
+  margin: 10px 0 20px;
+}
+.btn-vermas{
+  display: inline-block;
+  padding: 10px 20px;
+  background: #23a39b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.3s;
+}
+.btn-vermas:hover{
+  background: #1c837d;
+  transform:scale(1.1)
+}
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    .feature {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 30%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: #004d99;
+    }
+    .rating {
+      color: #FFD700; /* Amarillo dorado */
+      font-size: 20px;
+      margin-bottom: 10px;
+  }
+
+  form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+form input:focus, 
+form textarea:focus {
+  border-color: #23a39b;
+  outline: none;
+  box-shadow: 0 0 5px rgba(35, 163, 155, 0.5);
+}
+
+
+    footer {
+      background-color: #002244;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container{
+        flex-direction: column;
+        align-items: center;
+      }
+      nav{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 5px;
+      }
+      nav a{
+        flex: 1 1 0;
+        max-width: 25%;
+        padding: 10px 40px;
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .us{
+        flex-direction: column;
+        text-align: center;
+      }
+      .us .imagen img{
+        max-width: 100%;
+        margin-top: 15px;
+      }
+      
+      .features {
+        flex-direction: column;
+      }
+
+      .feature {
+        flex: 1 1 100%;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="images/logotipo.png" alt="Smart Secure" class="logo-encabezado">
+      <div class="logo-texto">
+        <H1 style="color: #23a39b;">SMART SECURE</H1>
+        <h3 style="color: #23a39b;"> Seguridad en todos lados</h3>
+        </div>
+      </a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="#">Productos</a>
+     <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
+  </header>
+
+  <section class="hero">
+    <h1>Protege lo que más importa</h1>
+    <p>Cámaras inteligentes alimentadas por energía solar y potenciadas con IA</p>
+  </section>
+
+<section class="producto-destacado">
+  <h2 style="text-align: center;">Nuestro destacado</h2>
+  <div class="producto-card">
+    <img src="images/DS-2XS6A47G1-LS_C36S80_image_1.png" alt="Cámara HIKVISION DS-2XS6A47G1-LS">
+    <div class="info-producto">
+      <h3>Cámara de Seguridad HikVision DS-2XS6A47G1-LS</h3>
+      <p>
+        Vigilancia en tiempo real, resistente a climas extremos y con acceso remoto desde tu celular. Ideal para hogares, negocios y fincas.
+      </p>
+      <a href="#" class="btn-vermas">Ver mas</a>
+      </div>
+    </div>
+  </section>
+
+<section class="container">
+  <h2 style="text-align:center;">Nuestros Productos</h2>
+  <div class="features">
+    <div class="feature">
+      <img src="images/Cámara IP.png" alt="Cámara IP" style="width: 300px;px; border-radius:8px;">
+      <h3>Cámaras IP</h3>
+      <p>Alta definición y conexión remota en tiempo real.</p>
+      <a href="#" class="btn-vermas">Ver más</a>
+    </div>
+    <div class="feature">
+      <img src="images/NVR5864-16P-EI_1_thumb.png" alt="Grabador DVR" style="width:400px; border-radius:8px;">
+      <h3>Grabadores DVR/NVR</h3>
+      <p>Almacenamiento seguro con acceso en la nube.</p>
+      <a href="#" class="btn-vermas">Ver más</a>
+    </div>
+    <div class="feature">
+      <img src="images/DS-PM1-RT-HWB_image_1.png" alt="Sistema de alarma" style="width: 500px;; border-radius:8px;">
+      <h3>Sistemas de Alarma</h3>
+      <p>Protección inmediata ante intrusos y emergencias.</p>
+      <a href="#" class="btn-vermas">Ver más</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="container">
+  <h1 style="text-align: center;">¿Quiénes somos?</h1>
+  <div class="us">
+    <div>
+    <p>
+      En <strong>Smart Secure</strong> creemos que la seguridad no debe ser un privilegio exclusivo de las ciudades. 
+      Por eso nos especializamos en diseñar e implementar <strong>cámaras de seguridad inteligentes</strong> pensadas 
+      para proteger a las comunidades rurales, fincas, negocios y hogares en zonas alejadas.  
+    </p>
+    <p>
+      Nuestro compromiso es brindar <strong>tranquilidad, confianza y tecnología accesible</strong>, adaptada a las 
+      necesidades del campo. Con sistemas fáciles de usar, resistentes y con monitoreo inteligente, buscamos que cada 
+      familia y empresa rural se sienta protegida en todo momento.  
+    </p>
+    <p>
+      Más que vender equipos, <strong>construimos soluciones</strong> que cuidan lo más valioso: la vida, el trabajo y 
+      los sueños de quienes día a día hacen crecer nuestras regiones.  
+    </p>
+    </div>
+
+    <div class="imagen">
+      <img src="images/hermoso-jardin-de-fresas-y-amanecer-en-doi-ang-khang-chiang-mai-tailandia.jpg" alt="Smart Secure">
+    </div>
+    </div>
+  </section>
+
+<section class="container">
+    <h2>¿Por qué elegir Smart Secure?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Inteligencia Artificial</h3>
+        <p>Nuestras cámaras detectan movimientos sospechosos y reconocen rostros en tiempo real.</p>
+      </div>
+      <div class="feature">
+        <h3>100% Energía Solar</h3>
+        <p>Solución ecológica y autosuficiente. Perfecta para cualquier entorno sin necesidad de cableado eléctrico.</p>
+      </div>
+      <div class="feature">
+        <h3>Monitoreo 24/7</h3>
+        <p>Accede desde cualquier lugar a través de nuestra app con alertas instantáneas en tu móvil.</p>
+      </div>
+    </div>
+</section>
+
+<section class="container" id="contacto">
+  <h2 style="text-align:center;">Contáctanos</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;">
+    <form style="flex:1 1 45%; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+      <label>Nombre</label>
+      <input type="text" name="nombre" required style="width:80%; padding:10px; margin-bottom:10px;">
+      
+      <label>Email</label>
+      <input type="email" name="email" required style="width:80%; padding:10px; margin-bottom:10px;">
+      
+      <label>Mensaje</label>
+      <textarea name="mensaje" rows="4" required style="width:100%; padding:10px; margin-bottom:10px;"></textarea>
+      
+      <button type="submit" class="btn-vermas">Enviar</button>
+    </form>
+
+    <div style="flex:1 1 45%;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.821088823502!2d-74.08175!3d4.60971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a6f74f2e59%3A0xabc123456789abcd!2sBogotá!5e0!3m2!1ses!2sco!4v1691234567890!5m2!1ses!2sco" 
+        width="100%" height="300" style="border:0; border-radius:8px;" 
+        allowfullscreen="" loading="lazy">
+      </iframe>
+      <p><strong>Teléfono:</strong> +57 301 6639414</p>
+      <p><strong>Email:</strong> contacto@smartsecure.com</p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/573015591100" target="_blank">Escríbenos aquí</a></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="container" style="text-align:center;">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="features">
+    <div class="feature">
+      <div class="rating">★★★★★</div>
+      <p>"Gracias a Smart Secure ahora mi finca está protegida las 24 horas. La instalación fue rápida y sencilla."</p>
+      <h4>- Juan Pérez</h4>
+    </div>
+    <div class="feature">
+      <div class="rating">★★★★☆</div>
+      <p>"Excelente servicio y soporte técnico. Sus cámaras solares son ideales para zonas rurales."</p>
+      <h4>- María Rodríguez</h4>
+    </div>
+    <div class="feature">
+      <div class="rating">★★★★★</div>
+      <p>"La aplicación móvil me permite ver mi negocio en tiempo real. Totalmente recomendados."</p>
+      <h4>- Carlos Gómez</h4>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Smart Secure. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
