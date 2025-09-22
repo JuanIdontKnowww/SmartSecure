@@ -378,11 +378,10 @@ form textarea:focus {
     }
 
     .productos-hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/banner-productos.jpg') center/cover no-repeat;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/Red-White-and-Black-Bold-Modern-Youtube-Thumbnail-5.png") center/cover no-repeat;
       color: #fff;
       text-align: center;
       padding: 100px 20px;
-      background-image: url(images/Red-White-and-Black-Bold-Modern-Youtube-Thumbnail-5.png);
     }
     .productos-hero h1 {
       font-size: 2.5rem;
