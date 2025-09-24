@@ -14,7 +14,6 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      border-radius: 7px;
       background: #f4f4f4;
       color: #333;
     }
@@ -607,10 +606,11 @@ form textarea:focus {
       line-height: 1.5;
     }
     
-    html, body {
+html, body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  border-radius: 0;
 }
 img {
   max-width: 100%;
@@ -642,10 +642,20 @@ form, iframe {
   max-width: 100%;
 }
 
-.btn-vermas, .btn-cotizar {
+.btn-vermas {
   display: inline-block;
   padding: 10px 15px;
   background: #23a39b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn-cotizar{
+    display: inline-block;
+  padding: 10px 15px;
+  background: #25D366;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
