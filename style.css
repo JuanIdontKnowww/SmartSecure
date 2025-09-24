@@ -620,8 +620,9 @@ img {
 
 .container, .features, .us, .productos-grid, .features-servicios{
   max-width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding: 15px;
+  box-sizing: border-box;
 }
 
 .features, .us, .productos-grid, .features-servicios {
