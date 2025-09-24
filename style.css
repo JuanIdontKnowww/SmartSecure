@@ -271,25 +271,71 @@
   background: #1c837d;
   transform:scale(1.1)
 }
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* centrado en PC */
+}
+
+.features .feature {
+  flex: 1 1 300px;  /* mínimo 300px */
+  max-width: 350px; /* límite ancho */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.features .feature img {
+  width: 100%;
+  height: 220px;       /* mismo alto para todas */
+  object-fit: cover;   /* recorte sin deformar */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.features .feature h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #1c3d5a;
+}
+
+.features .feature p {
+  font-size: 0.95rem;
+  color: #555;
+  min-height: 50px; /* asegura alineación de las tarjetas */
+  margin-bottom: 15px;
+}
+
+.features .feature .btn-vermas {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #23a39b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.features .feature .btn-vermas:hover {
+  background: #1c837d;
+  transform: scale(1.1);
+}
+  
     .feature:hover{
       transform: translateY(-5px);
       box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
-    .feature {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      flex: 1 1 30%;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    }
+
 
     .feature h3 {
       margin-top: 0;
@@ -625,11 +671,28 @@ img {
   box-sizing: border-box;
 }
 
-.features, .us, .productos-grid, .features-servicios {
+.features{
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+.us{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.productos-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+.features-servicios{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .feature, .producto, .feature-servicio, .info-producto {
