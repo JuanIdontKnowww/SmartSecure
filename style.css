@@ -195,6 +195,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .us:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
     .us .texto{
       flex: 2;
@@ -226,6 +231,11 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.producto-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 .producto-card img{
   width: 450px;
@@ -264,7 +274,10 @@
       gap: 20px;
       justify-content: space-between;
     }
-    
+    .feature:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+    }
 
     .feature {
       background: white;
@@ -272,6 +285,7 @@
       border-radius: 8px;
       flex: 1 1 30%;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     }
 
     .feature h3 {
