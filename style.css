@@ -415,6 +415,34 @@ form textarea:focus {
       font-size: 1.2rem;
     }
 
+    .servicios-hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/personas-de-angulo-bajo-trabajando-con-taladro.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .servicios-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .servicios-hero p {
+      font-size: 1.2rem;
+    }
+
+    .contacto-hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/primer-plano-de-la-camara-de-cctv-en-la-pared.jpg") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .contacto-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .contacto-hero p {
+      font-size: 1.2rem;
+    }
+
     .productos-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -524,7 +552,7 @@ form textarea:focus {
 }
     @media (min-width: 768px) {
   .features-servicios {
-    grid-template-columns: repeat(2, 1fr); /* en pantallas medianas o más: 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

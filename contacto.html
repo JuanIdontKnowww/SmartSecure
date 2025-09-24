@@ -29,7 +29,7 @@
     </div>
   </header>
 
-  <section class="productos-hero">
+  <section class="contacto-hero">
     <h1>Contáctanos</h1>
     <p>Estamos listos para ayudarte a proteger lo que más importa</p>
   </section>
@@ -55,7 +55,7 @@
           width="100%" height="300" style="border:0; border-radius:8px;" allowfullscreen loading="lazy">
         </iframe>
         <p><strong>Teléfono:</strong> +57 301 6639414</p>
-        <p><strong>Email:</strong> contacto@smartsecure.com</p>
+        <p><strong>Email:</strong> contacto.smartsecure@gmail.com</p>
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/573015591100" target="_blank">Escríbenos aquí</a></p>
       </div>
     </div>
@@ -64,6 +64,46 @@
   <footer>
     <p>&copy; 2025 Smart Secure. Todos los derechos reservados.</p>
   </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // evita el envío automático
+
+      // obtener valores
+      const nombre = form.nombre.value.trim();
+      const email = form.email.value.trim();
+      const mensaje = form.mensaje.value.trim();
+
+      // validaciones
+      if (nombre.length < 3) {
+        alert("Por favor ingresa un nombre válido (mínimo 3 caracteres).");
+        form.nombre.focus();
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Por favor ingresa un correo válido.");
+        form.email.focus();
+        return;
+      }
+
+      if (mensaje.length < 10) {
+        alert("El mensaje debe tener al menos 10 caracteres.");
+        form.mensaje.focus();
+        return;
+      }
+
+      // si todo está bien
+      alert("¡Formulario enviado correctamente!");
+      form.reset();
+    });
+  });
+</script>
+
 
 </body>
 </html>
